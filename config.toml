@@ -3,7 +3,7 @@ publishDir = "docs"
 
 languageCode = "pt-br"
 DefaultContentLanguage = "pt"
-title = "Hugo Techdoc Theme"
+title = "Curso de VEIN"
 theme = "hugo-theme-techdoc"
 
 hasCJKLanguage = true
@@ -20,16 +20,16 @@ enableMissingTranslationPlaceholders = false
 
     # Souce Code repository section
     description = "Curso VEIN"
-    github_repository = "https://github.com/ibarraespinosa/cursovein/"
-    version = "0.1.0"
+    github_repository = "https://github.com/atmoschem/vein"
+    version = "0.8.7"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
-    github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+    github_doc_repository = "https://atmoschem.github.io/vein/"
 
     # Analytic section
-    google_analytics_id = "" # Your Google Analytics tracking id
-    tag_manager_container_id = "" # Your Google Tag Manager container id
+    google_analytics_id = "UA-2642843-7" # Your Google Analytics tracking id
+    tag_manager_container_id = "GTM-TCS5SFZ" # Your Google Tag Manager container id
     google_site_verification = "" # Your Google Site Verification for Search Console
 
     # Open Graph and Twitter Cards settings section
@@ -41,7 +41,7 @@ enableMissingTranslationPlaceholders = false
     # Theme settings section
     # Theme color
     custom_font_color = ""
-    custom_background_color = ""
+    custom_background_color = "black"
 
     # Documentation Menu section
     # Menu style settings
@@ -69,7 +69,7 @@ enableMissingTranslationPlaceholders = false
 
 [[menu.main]]
     name = "Twitter"
-    url = "https://twitter.com/thingsym"
+    url = "https://twitter.com/SergioIbarraEs1"
     weight = 2
 
 [markup]
