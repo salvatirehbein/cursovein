@@ -19,9 +19,9 @@ enableMissingTranslationPlaceholders = false
 [Params]
 
     # Souce Code repository section
-    description = "put your description"
-    github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.7.0"
+    description = "Curso VEIN"
+    github_repository = "https://github.com/ibarraespinosa/cursovein/"
+    version = "0.1.0"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
