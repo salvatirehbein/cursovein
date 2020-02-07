@@ -9,9 +9,9 @@ images:
 - home-cover.png
 ---
 
-# Hugo Techdoc Theme
+# Curso de VEIN
 
-## The Techdoc is a Hugo Theme for technical documentation.
+## VEIN es Vehicular Emissions INventory
 
 ## Features
 

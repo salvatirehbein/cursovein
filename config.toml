@@ -1,8 +1,8 @@
 baseURL = "https://ibarraespinosa.github.io/cursovein"
 publishDir = "docs"
 
-languageCode = "en-us"
-DefaultContentLanguage = "en"
+languageCode = "pt-br"
+DefaultContentLanguage = "pt"
 title = "Hugo Techdoc Theme"
 theme = "hugo-theme-techdoc"
 
