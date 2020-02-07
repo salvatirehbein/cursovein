@@ -9,21 +9,21 @@ images:
 - home-cover.png
 ---
 
-# Curso sobre Vehicular Emissions Inventory (VEIN)
+# Curso sobre Vehicular Emissions Inventory (VEIN) 
 
 
 ## Características 
 
-VEIN é um pacote de R para estimar emissões veiculares em 5 etapas.
+
+VEIN é um pacote de R para estimar emissões veiculares em 5 etapas. 
 
 
-* Preparação da informação espacial, ruas o regiões (UF, municipio, etc.).
-* Preparar e organizar dados de actividade veicular. 
-* Preparar fatores de emissão.
-* Estimar emissões.
-* Post-processamento de emissões em mapas e bancos de dados.
+1. [Preparação da informação espacial, ruas o regiões (UF, municipio, etc.).](chapter1)
+2. [Preparar e organizar dados de actividade veicular.](chapter2)
+3. [Preparar fatores de emissão.](chapter3)
+4. Estimar emissões.
+5. Post-processamento de emissões em mapas e bancos de dados.
 
-![](https://atmoschem.github.io/vein/reference/figures/logo.png)
 
 * Documentation menu (Select [Menu style](getting-started/screenshot/#menu-style))
 * [Table Of Contents](sample/table-of-contents/) for the page (selective)
@@ -31,3 +31,6 @@ VEIN é um pacote de R para estimar emissões veiculares em 5 etapas.
 * [Edit link](getting-started/screenshot/#edit-link) to documentation repository
 * [Custom Shortcodes](sample/custom-shortcodes/)
 * Analytics with Google Analytics, Google Tag Manager
+
+
+![](https://github.com/ibarraespinosa/cursovein/blob/master/static/images/home-cover.png?raw=true)
