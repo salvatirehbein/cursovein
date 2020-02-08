@@ -70,9 +70,3 @@ pacaur/yaourt/whatever -S udunits
 brew install pkg-config
 brew install gdal netcdf
 ```
-
-## [Configuration](./configuration)
-
-You may specify options in config.toml (or config.yaml/config.json) of your site to make use of this theme's features.
-
-## [Screenshot](./screenshot)
