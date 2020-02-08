@@ -36,12 +36,13 @@ library(vein) demo(VEIN) dica:
     </item>
     
     <item>
-      <title>Screenshot</title>
+      <title>Dados dentro do modelo</title>
       <link>http://localhost:1313/cursovein/getting-started/screenshot/</link>
       <pubDate>Sat, 26 Oct 2019 15:26:15 +0000</pubDate>
       
       <guid>http://localhost:1313/cursovein/getting-started/screenshot/</guid>
-      <description>Theme color Menu style Open Menu Slide Menu Edit link </description>
+      <description>o modelo vein tem varios dados para facilitar a vida.
+Theme color Menu style Open Menu Slide Menu Edit link </description>
     </item>
     
   </channel>

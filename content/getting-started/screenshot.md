@@ -1,9 +1,12 @@
 ---
-title: "Screenshot"
+title: "Dados dentro do modelo"
 date: 2019-10-26T15:26:15Z
 draft: false
 weight: 30
 ---
+
+o modelo vein tem varios dados para facilitar a vida.
+
 
 ### Theme color
 
