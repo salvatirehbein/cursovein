@@ -158,7 +158,10 @@ library(vein) demo(VEIN) dica:
       
       <guid>http://localhost:1313/cursovein/about/</guid>
       <description>VEIN foi desenvolvido por mim, Sergio Ibarra-Espinosa, post-doc DCA/IAG Universidade de São Paulo.
-Eu sou chileno. Eu me formei de engenheiro em prevenção de perdas e meio ambiente da Universidade Metropolitana Tecnológica (UTEM), onde estudei os efeitos na saúde da poluição do ar usando R desde o ano 2004. Desde 2008 começẽi a trabalhar no Centro Nacional de Meio Ambiente (CENMA) no Chile, focado nas emissões de veículos, aeroportos, queima de biomassa e indústria de mineração.</description>
+O desenvolvimento do modelo foi publicado na revista Geoscientific Model Development (GMD) e a citação é:
+ Ibarra-Espinosa, S., Ynoue, R., O&amp;rsquo;Sullivan, S., Pebesma, E., Andrade, M. D. F., and Osses, M.: VEIN v0.2.2: an R package for bottom–up vehicular emissions inventories, Geosci. Model Dev., 11, 2209–2229, https://doi.org/10.5194/gmd-11-2209-2018, 2018.
+ ou em bibtex:
+@article{gmd-11-2209-2018, author = {Ibarra-Espinosa, S.</description>
     </item>
     
     <item>
