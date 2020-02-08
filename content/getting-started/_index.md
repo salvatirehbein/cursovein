@@ -12,7 +12,7 @@ images:
 ---
 
 
-## [Instalação](./installation)
+## [Instalação]
 
 A forma mas facil de instalar vein é, abrir R e escrever na termina:
 
