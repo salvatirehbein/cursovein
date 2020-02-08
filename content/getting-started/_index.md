@@ -36,28 +36,40 @@ De forma automática vão ser instalados os pacotes extras que são necessarios.
 
 ## [Pre-requisitos]
 
-[sf](https://github.com/r-spatial/sf/) é um pacote de R com interace para as librerías [GDAL](http://www.gdal.org/) (vetores), [PROJ](http://proj4.org/) e [GEOS](http://trac.osgeo.org/geos). Esto implica que estas librerías tem que estar presentes no sistema primeiro antes de instalar sf. As recomendações da pagina web de GitHub [sf](https://github.com/r-spatial/sf/) para instalar as librerias em diferentes sitemas são:
+[sf](https://github.com/r-spatial/sf/) é um pacote de R com interace para as librerías [GDAL](http://www.gdal.org/) (vetores), [PROJ](http://proj4.org/) e [GEOS](http://trac.osgeo.org/geos). Esto implica que estas librerías tem que estar presentes no sistema primeiro antes de instalar sf. 
+**eixport** importa funcções do [ncdf4](https://CRAN.R-project.org/package=ncdf4), então também é necessario instalar [NetCDF](https://www.unidata.ucar.edu/software/netcdf/).
+
+As recomendações da pagina web de GitHub [sf](https://github.com/r-spatial/sf/) para instalar as librerias em diferentes siwtemas são:
 
 ### Windows
 
-Instala [R], ve a versão e instala [Rtools](https://cran.r-project.org/bin/windows/Rtools/), que provee MinGW-w64 32/64-bit para compilar C, Fortran e C++.
+Instala [R], ve a versão e instala [Rtools](https://cran.r-project.org/bin/windows/Rtools/), que provee MinGW-w64 32/64-bit para compilar C, Fortran e C++. Isto é importante porque vein tambem tem codigo em Fortran.
 
 ### Ubuntu
 
 ```bash
-sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
+sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev libnetcdf-dev
 ```
 
 ### Fedora
 
 ```bash
-sudo dnf install gdal-devel proj-devel proj-epsg proj-nad geos-devel udunits2-devel
+sudo dnf install gdal-devel proj-devel proj-epsg proj-nad geos-devel udunits2-devel netcdf-devel
 ```
 
 ### Arch
 
+```bash
+pacman -S gdal proj geos netcdf
+pacaur/yaourt/whatever -S udunits
+```
 
+### MacOS
 
+```bash
+brew install pkg-config
+brew install gdal netcdf
+```
 
 ## [Configuration](./configuration)
 

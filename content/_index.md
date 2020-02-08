@@ -30,7 +30,13 @@ O curso esta pensado para quem não tem conhecimento de R, sabe usar um processa
 
 Os prerequisitos desejaveis seríam conhecimento de R base, data.table, e sf. Sem embargo, provavelmente o mais o pre-requisito mais importante é que tem que fazer tudo **pasinho por pasinho** e escrever todo o que faz entre cada passinho.
 
+## NOTA:
 
+O curso não é uma clinica para resolver os problemas de R. Os alumnos tem que trazer um laptop com R e as librerias instaladas. O curso vai ser realizado no auditorio G do [IAG](https://www.google.com/maps/@-23.5597761,-46.7338571,3a,75y,0.33h,92.02t/data=!3m6!1e1!3m4!1s5nlPE_JBOQT8UBGdvVXX3g!2e0!7i13312!8i6656), que tem conexões de eletricidade e Internet.
+
+![](https://i.imgur.com/iaO9Djp.png)
+
+[mapa](https://www.google.com/maps/@-23.5597761,-46.7338571,3a,75y,0.33h,92.02t/data=!3m6!1e1!3m4!1s5nlPE_JBOQT8UBGdvVXX3g!2e0!7i13312!8i6656)
 
 * Documentation menu (Select [Menu style](getting-started/screenshot/#menu-style))
 * [Table Of Contents](sample/table-of-contents/) for the page (selective)
