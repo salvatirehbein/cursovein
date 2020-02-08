@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Dados dentro do modelo - Curso de VEIN</title>
+<meta name="description" content="Curso VEIN">
+<meta name="generator" content="Hugo 0.64.0" />
+<link href="http://localhost:1313/cursovein/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="http://localhost:1313/cursovein/getting-started/dados/">
+<link rel="stylesheet" href="http://localhost:1313/cursovein/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="http://localhost:1313/cursovein/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="http://localhost:1313/cursovein/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Dados dentro do modelo" />
+<meta property="og:description" content="o modelo vein tem varios dados para facilitar a vida.
+Fatores de emissão da CETESB 2018 Os fatores estão dentro da função ef_cetesb:
+library(vein) ef_cetesb(p, veh, year = 2017, agemax = 40, full = FALSE, project = &#34;constant&#34;) Quilometragem médio para veículos de Brazil Bruni e Bales (2013) publicaram regressões de mais de 2 millões de medições de odómetro. As equações resultanes foram incluidas no modelo
+data(fkm) Bruni, Antonio De Castro, and Marcelo Pereira Bales." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/cursovein/getting-started/dados/" />
+<meta property="og:image" content="http://localhost:1313/cursovein/og-image.png"/>
+<meta property="article:published_time" content="2019-10-26T15:26:15+00:00" />
+<meta property="article:modified_time" content="2019-10-26T15:26:15+00:00" /><meta property="og:site_name" content="Hugo Techdoc Theme" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://localhost:1313/cursovein/og-image.png"/>
+
+<meta name="twitter:title" content="Dados dentro do modelo"/>
+<meta name="twitter:description" content="o modelo vein tem varios dados para facilitar a vida.
+Fatores de emissão da CETESB 2018 Os fatores estão dentro da função ef_cetesb:
+library(vein) ef_cetesb(p, veh, year = 2017, agemax = 40, full = FALSE, project = &#34;constant&#34;) Quilometragem médio para veículos de Brazil Bruni e Bales (2013) publicaram regressões de mais de 2 millões de medições de odómetro. As equações resultanes foram incluidas no modelo
+data(fkm) Bruni, Antonio De Castro, and Marcelo Pereira Bales."/>
+<meta itemprop="name" content="Dados dentro do modelo">
+<meta itemprop="description" content="o modelo vein tem varios dados para facilitar a vida.
+Fatores de emissão da CETESB 2018 Os fatores estão dentro da função ef_cetesb:
+library(vein) ef_cetesb(p, veh, year = 2017, agemax = 40, full = FALSE, project = &#34;constant&#34;) Quilometragem médio para veículos de Brazil Bruni e Bales (2013) publicaram regressões de mais de 2 millões de medições de odómetro. As equações resultanes foram incluidas no modelo
+data(fkm) Bruni, Antonio De Castro, and Marcelo Pereira Bales.">
+<meta itemprop="datePublished" content="2019-10-26T15:26:15&#43;00:00" />
+<meta itemprop="dateModified" content="2019-10-26T15:26:15&#43;00:00" />
+<meta itemprop="wordCount" content="371">
+<meta itemprop="image" content="http://localhost:1313/cursovein/og-image.png"/>
+
+
+
+<meta itemprop="keywords" content="" /></head>
+<body>
+
+<div class="container"><header>
+<h1>Curso de VEIN</h1>
+
+ <span class="version">Version 0.8.7</span>
+<a href="https://github.com/atmoschem/vein" class="github"><i class="fab fa-github"></i></a>
+<p class="description">Curso VEIN</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="https://ibarraespinosa.github.io/cursovein">Home</a></li>
+<li><a href="https://twitter.com/SergioIbarraEs1">Twitter</a></li>
+<li><a href="/cursovein/post/goisforlovers/">(Hu)go Template Primer</a></li>
+<li><a href="/cursovein/about/">Acerca de</a></li>
+<li><a href="/cursovein/post/hugoisforlovers/">Getting Started with Hugo</a></li><li class="parent"><a href="">Tutorials<i class="fas fa-angle-right"></i></a>
+<ul class="sub-menu">
+<li class="child"><a href="/cursovein/post/creating-a-new-theme/">Creating a New Theme</a></li>
+<li class="child"><a href="/cursovein/post/migrate-from-jekyll/">Migrating from Jekyll</a></li>
+</ul>
+</li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Dados dentro do modelo</h1>
+<p>o modelo vein tem varios dados para facilitar a vida.</p>
+<h3 id="fatores-de-emissão-da-cetesb-2018">Fatores de emissão da CETESB 2018</h3>
+<p>Os fatores estão dentro da função <a href="https://atmoschem.github.io/vein/reference/ef_cetesb.html">ef_cetesb</a>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">library</span><span class="p">(</span><span class="n">vein</span><span class="p">)</span>
+<span class="nf">ef_cetesb</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">veh</span><span class="p">,</span> <span class="n">year</span> <span class="o">=</span> <span class="m">2017</span><span class="p">,</span> <span class="n">agemax</span> <span class="o">=</span> <span class="m">40</span><span class="p">,</span> <span class="n">full</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">project</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">constant&#34;</span><span class="p">)</span>
+</code></pre></div><h3 id="quilometragem-médio-para-veículos-de-brazil">Quilometragem médio para veículos de Brazil</h3>
+<p><a href="https://cetesb.sp.gov.br/veicular/relatorios-e-publicacoes/">Bruni e Bales (2013)</a> publicaram regressões de mais de 2 millões de medições de odómetro. As equações resultanes foram incluidas no modelo</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">data</span><span class="p">(</span><span class="n">fkm</span><span class="p">)</span>
+</code></pre></div><p>Bruni, Antonio De Castro, and Marcelo Pereira Bales. 2013. “Curvas de Intensidade de Uso Por Tipo de Veículo Automotor Da Frota Da Cidade de São Paulo.” CETESB.</p>
+<h3 id="fatores-de-expansão-temporal">Fatores de expansão temporal</h3>
+<p>Tem dois dados de fatores de expansão temporal gerados a partir do fluxo horario das praças de pedágio de São Paulo, da ARTESP (obrigado Artesp). Os dados são <code>pc_profile</code> e <code>profiles</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">data</span><span class="p">(</span><span class="n">pc_profile</span><span class="p">)</span>
+<span class="n">tf</span> <span class="o">&lt;-</span> <span class="nf">unlist</span><span class="p">(</span><span class="n">pc_profile</span><span class="p">)</span>
+<span class="n">hours</span> <span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="m">168</span>
+<span class="nf">par</span><span class="p">(</span><span class="n">mar</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">.1</span><span class="p">,</span> <span class="m">.1</span><span class="p">)</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">hours</span><span class="p">,</span> <span class="n">pch</span> <span class="o">=</span> <span class="m">16</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">b&#34;</span><span class="p">)</span>
+</code></pre></div><p><img src="https://i.imgur.com/4nupPCB.png" alt=""></p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">data</span><span class="p">(</span><span class="n">profiles</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">profiles</span><span class="p">)</span>
+ <span class="n">[1</span><span class="n">]</span> <span class="s">&#34;</span><span class="s">PC_JUNE_2012&#34;</span>     <span class="s">&#34;</span><span class="s">PC_JUNE_2013&#34;</span>     <span class="s">&#34;</span><span class="s">PC_JUNE_2014&#34;</span>     <span class="s">&#34;</span><span class="s">LCV_JUNE_2012&#34;</span>   
+ <span class="n">[5</span><span class="n">]</span> <span class="s">&#34;</span><span class="s">LCV_JUNE_2013&#34;</span>    <span class="s">&#34;</span><span class="s">LCV_JUNE_2014&#34;</span>    <span class="s">&#34;</span><span class="s">MC_JUNE_2012&#34;</span>     <span class="s">&#34;</span><span class="s">MC_JUNE_2013&#34;</span>    
+ <span class="n">[9</span><span class="n">]</span> <span class="s">&#34;</span><span class="s">MC_JUNE_2014&#34;</span>     <span class="s">&#34;</span><span class="s">HGV_JUNE_2012&#34;</span>    <span class="s">&#34;</span><span class="s">HGV_JUNE_2013&#34;</span>    <span class="s">&#34;</span><span class="s">HGV_JUNE_2014&#34;</span>   
+<span class="n">[13</span><span class="n">]</span> <span class="s">&#34;</span><span class="s">PC_JANUARY_2012&#34;</span>  <span class="s">&#34;</span><span class="s">PC_JANUARY_2013&#34;</span>  <span class="s">&#34;</span><span class="s">PC_JANUARY_2014&#34;</span>  <span class="s">&#34;</span><span class="s">LCV_JANUARY_2012&#34;</span>
+<span class="n">[17</span><span class="n">]</span> <span class="s">&#34;</span><span class="s">LCV_JANUARY_2013&#34;</span> <span class="s">&#34;</span><span class="s">LCV_JANUARY_2014&#34;</span> <span class="s">&#34;</span><span class="s">MC_JANUARY_2012&#34;</span>  <span class="s">&#34;</span><span class="s">MC_JANUARY_2014&#34;</span> 
+<span class="n">[21</span><span class="n">]</span> <span class="s">&#34;</span><span class="s">HGV_JANUARY_2012&#34;</span> <span class="s">&#34;</span><span class="s">HGV_JANUARY_2013&#34;</span> <span class="s">&#34;</span><span class="s">HGV_JANUARY_2014&#34;</span>
+</code></pre></div><h2 id="perfil-para-partidas-em-frio">Perfil para partidas em frio</h2>
+<p>Em 2004, Mauricio Osses e outros mediram as partidas em Sâo Paulo</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">data</span><span class="p">(</span><span class="n">pc_cold</span><span class="p">)</span>
+</code></pre></div><p>Lents, James, Nicole Davis, Nick Nikkila, and Mauricio Osses. 2004. “São Paulo Vehicle Activity Study.” 605 South Palm Street, Suite C, La Habra, CA 90631, USA: International Sustainable System Research Cente</p>
+<p>dica:</p>
+<blockquote>
+<p>O melhor dado de perfil horario é o medido especificamente para o periodo de estudo. Os fatores de expansão temporal podem ser ussados só se não tiver dados melhores.</p>
+</blockquote>
+<h2 id="poluentes-com-pesso-molecular-e-mir">Poluentes com pesso molecular e MIR</h2>
+<p>vein conta com  fatores de emissão de quase 150 poluentes. Estos dados podem ser vistos assim:</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">data</span><span class="p">(</span><span class="n">pollutants</span><span class="p">)</span>
+<span class="nf">View</span><span class="p">(</span><span class="n">pollutants</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">pollutants</span><span class="p">)</span>
+  <span class="n">n</span> <span class="n">group1</span>  <span class="n">group2</span>     <span class="n">pollutant</span>      <span class="n">CAS</span>            <span class="n">g_mol</span>       <span class="n">MIR</span>     <span class="n">MOIR</span>
+<span class="m">1</span> <span class="m">1</span>   <span class="n">NMHC</span> <span class="n">alkenes</span>      <span class="m">1</span><span class="o">-</span><span class="n">butene</span> <span class="m">106</span><span class="m">-98</span><span class="m">-9</span> <span class="m">56.10632</span> <span class="n">[g</span><span class="o">/</span><span class="n">mol</span><span class="n">]</span>  <span class="m">9.726590</span> <span class="m">3.822154</span>
+<span class="m">2</span> <span class="m">2</span>   <span class="n">NMHC</span> <span class="n">alkenes</span>      <span class="m">1</span><span class="o">-</span><span class="n">hexene</span> <span class="m">592</span><span class="m">-41</span><span class="m">-6</span> <span class="m">84.15948</span> <span class="n">[g</span><span class="o">/</span><span class="n">mol</span><span class="n">]</span>  <span class="m">5.492385</span> <span class="m">2.329718</span>
+<span class="m">3</span> <span class="m">3</span>   <span class="n">NMHC</span> <span class="n">alkenes</span>     <span class="m">1</span><span class="o">-</span><span class="n">pentene</span> <span class="m">109</span><span class="m">-67</span><span class="m">-1</span> <span class="m">70.13290</span> <span class="n">[g</span><span class="o">/</span><span class="n">mol</span><span class="n">]</span>  <span class="m">7.207436</span> <span class="m">2.884923</span>
+<span class="m">4</span> <span class="m">4</span>   <span class="n">NMHC</span> <span class="n">alkenes</span> <span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="o">-</span><span class="n">butadiene</span> <span class="m">106</span><span class="m">-99</span><span class="m">-0</span> <span class="m">54.09044</span> <span class="n">[g</span><span class="o">/</span><span class="n">mol</span><span class="n">]</span> <span class="m">12.612103</span> <span class="m">4.705564</span>
+<span class="m">5</span> <span class="m">5</span>   <span class="n">NMHC</span> <span class="n">alkenes</span>      <span class="m">2</span><span class="o">-</span><span class="n">butene</span> <span class="m">106</span><span class="m">-98</span><span class="m">-9</span> <span class="m">56.11000</span> <span class="n">[g</span><span class="o">/</span><span class="n">mol</span><span class="n">]</span>        <span class="kc">NA</span>       <span class="kc">NA</span>
+<span class="m">6</span> <span class="m">6</span>   <span class="n">NMHC</span> <span class="n">alkenes</span>     <span class="m">2</span><span class="o">-</span><span class="n">pentene</span> <span class="m">627</span><span class="m">-20</span><span class="m">-3</span> <span class="m">70.13290</span> <span class="n">[g</span><span class="o">/</span><span class="n">mol</span><span class="n">]</span> <span class="m">10.474641</span> <span class="m">3.954795</span>
+      <span class="n">EBIR</span> <span class="n">notes</span>
+<span class="m">1</span> <span class="m">2.367359</span>      
+<span class="m">2</span> <span class="m">1.446754</span>      
+<span class="m">3</span> <span class="m">1.775662</span>      
+<span class="m">4</span> <span class="m">2.876026</span>      
+<span class="m">5</span>       <span class="kc">NA</span>      
+<span class="m">6</span> <span class="m">2.452128</span>  
+</code></pre></div><div class="edit-meta">
+Last updated on 26 Oct 2019
+
+
+<br>
+Published on 26 Oct 2019
+<br><a href="getting-started/dados.md/edit/master/content/getting-started/dados.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="http://localhost:1313/cursovein/getting-started/installation/" title="Instalação"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Instalação</a>
+<a class="nav nav-next" href="http://localhost:1313/cursovein/sample/" title="Sample Document">Next - Sample Document <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main><div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="http://localhost:1313/cursovein/">Home</a></li>
+
+<li class="parent"><a href="http://localhost:1313/cursovein/getting-started/">Começando</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="http://localhost:1313/cursovein/getting-started/configuration/">Pre-Requisitos</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/getting-started/installation/">Instalação</a></li>
+<li class="active"><a href="http://localhost:1313/cursovein/getting-started/dados/">Dados dentro do modelo</a></li>
+</ul>
+  
+</li>
+
+<li class=""><a href="http://localhost:1313/cursovein/sample/">Sample Document</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="http://localhost:1313/cursovein/sample/build-in-shortcodes/">Build-in Shortcodes</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/sample/custom-shortcodes/">Custom Shortcodes</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/sample/table-of-contents/">Table of Contents</a></li>
+</ul>
+  
+</li>
+
+<li class=""><a href="http://localhost:1313/cursovein/chapter1/">1. Informação espacial</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="http://localhost:1313/cursovein/chapter1/1/">Dados 1-1</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/chapter1/2/">Dados 1-2</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/chapter1/3/">Dados 1-3</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/chapter1/4/">Dados 1-4</a></li>
+</ul>
+  
+</li>
+
+<li class=""><a href="http://localhost:1313/cursovein/chapter2/">Atividade veicular (weighted)</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="http://localhost:1313/cursovein/chapter2/3/">Dados 2-3 (weight: 10)</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/chapter2/4/">Dados 2-4 (weight: 20)</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/chapter2/2/">Dados 2-2 (weight: 30)</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/chapter2/1/">Dados 2-1 (weight: 40)</a></li>
+</ul>
+  
+</li>
+
+<li class=""><a href="http://localhost:1313/cursovein/chapter3/">Fatores de emissão 3 (hierarchized)</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="http://localhost:1313/cursovein/chapter3/chapter3-2/">CETESB 3-2</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="http://localhost:1313/cursovein/chapter3/chapter3-2/1/">Chapter 3-2-1</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/chapter3/chapter3-2/2/">Chapter 3-2-2</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/chapter3/chapter3-2/3/">Chapter 3-2-3</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/chapter3/chapter3-2/4/">Chapter 3-2-4</a></li>
+</ul>
+  
+</li>
+<li class=""><a href="http://localhost:1313/cursovein/chapter3/1/">Chapter 3-1</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/chapter3/3/">Chapter 3-3</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/chapter3/4/">Chapter 3-4</a></li>
+</ul>
+  
+</li>
+
+
+
+
+
+
+
+
+
+
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

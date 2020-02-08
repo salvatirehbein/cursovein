@@ -37,12 +37,14 @@ library(vein) demo(VEIN) dica:
     
     <item>
       <title>Dados dentro do modelo</title>
-      <link>http://localhost:1313/cursovein/getting-started/screenshot/</link>
+      <link>http://localhost:1313/cursovein/getting-started/dados/</link>
       <pubDate>Sat, 26 Oct 2019 15:26:15 +0000</pubDate>
       
-      <guid>http://localhost:1313/cursovein/getting-started/screenshot/</guid>
+      <guid>http://localhost:1313/cursovein/getting-started/dados/</guid>
       <description>o modelo vein tem varios dados para facilitar a vida.
-Theme color Menu style Open Menu Slide Menu Edit link </description>
+Fatores de emissão da CETESB 2018 Os fatores estão dentro da função ef_cetesb:
+library(vein) ef_cetesb(p, veh, year = 2017, agemax = 40, full = FALSE, project = &amp;#34;constant&amp;#34;) Quilometragem médio para veículos de Brazil Bruni e Bales (2013) publicaram regressões de mais de 2 millões de medições de odómetro. As equações resultanes foram incluidas no modelo
+data(fkm) Bruni, Antonio De Castro, and Marcelo Pereira Bales.</description>
     </item>
     
   </channel>
