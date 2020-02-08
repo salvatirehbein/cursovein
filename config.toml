@@ -12,7 +12,7 @@ metaDataFormat = "yaml"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
-defaultContentLanguage = "en"
+defaultContentLanguage = "pt"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 

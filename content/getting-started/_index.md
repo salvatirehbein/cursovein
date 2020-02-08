@@ -70,3 +70,20 @@ pacaur/yaourt/whatever -S udunits
 brew install pkg-config
 brew install gdal netcdf
 ```
+
+## IDEs como RStudio o VSCode
+
+É altamente recomendado instalar [Rstudio](https://rstudio.com/) ou [VSCode](https://code.visualstudio.com/).
+
+## demo
+
+Quando vein esteja instalado, é possivel rodar o demo apertando a tecla ENTER para mudar de graficos.
+
+```r
+library(vein)
+demo(VEIN)
+```
+
+dica:
+
+> Antes de usar VEIN, fecha Google Chrome pois usa muita memoria RAM
