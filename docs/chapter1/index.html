@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>1. Informação espacial - Curso de VEIN</title>
+<title>Estrutura do inventário - Curso de VEIN</title>
 <meta name="description" content="Curso VEIN">
 <meta name="generator" content="Hugo 0.64.0" />
 <link href="http://localhost:1313/cursovein/index.xml" rel="alternate" type="application/rss+xml">
@@ -16,7 +16,7 @@
 <script src="http://localhost:1313/cursovein/js/bundle.js"></script><style>
 :root {}
 </style>
-<meta property="og:title" content="1. Informação espacial" />
+<meta property="og:title" content="Estrutura do inventário" />
 <meta property="og:description" content="Curso VEIN" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:1313/cursovein/chapter1/" />
@@ -25,9 +25,9 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://localhost:1313/cursovein/og-image.png"/>
 
-<meta name="twitter:title" content="1. Informação espacial"/>
+<meta name="twitter:title" content="Estrutura do inventário"/>
 <meta name="twitter:description" content="Curso VEIN"/>
-<meta itemprop="name" content="1. Informação espacial">
+<meta itemprop="name" content="Estrutura do inventário">
 <meta itemprop="description" content="Curso VEIN"></head>
 <body>
 
@@ -55,14 +55,30 @@
 </nav>
 </div>
 <div class="content-container">
-<main><h1>1. Informação espacial</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<div class="edit-meta">
+<main><h1>Estrutura do inventário</h1><p>Não tem uma estrutura definida para rodar vein, isso quer dizer que cada usuario poder ordenar as funções do jeito que quiser. Mas neste curso, vamos a deixar bem estruturado in inventário para evitar erros, evitar usso innecessario de memoria e que seja mais facil replicar os resultados.</p>
+<p>O caso que vai ser estudado vai ser considerando a frota de Brasil, especificamente a composição veicular presente nos <a href="https://cetesb.sp.gov.br/veicular/relatorios-e-publicacoes/">inventários de emissões da CETESB</a>. A razão é simples, para cada tipo de veículo tem um fator de emissão.</p>
+<h2 id="estrutura-do-inventario">Estrutura do inventario</h2>
+<p>Para gerar a estrutura do invenário primeiro temos que conhecer a composição veicular que vamos utilizar, que é da CETESB:</p>
+<p><img src="https://i.imgur.com/PVyU0r0.png" alt=""></p>
+<p>A função que gera a estrutura do inventário é <code>inventory</code> os argumentos mais importantes são <code>name</code> e <code>vehcomp</code></p>
+<ul>
+<li><code>name</code> é o nome da pasta onde vai ser compilado o inventario</li>
+<li><code>vehcomp</code> é a composição veicular, neste caso a composião da CETESB com os nomes em inglês:</li>
+<li><strong>PC</strong> (Automóveis), <strong>LCV</strong> (Comerciais Leves), <strong>HGV</strong> (Caminhões), <strong>BUS</strong> (Ônibus), <strong>MC</strong> (Motocicletas).</li>
+</ul>
+<p>Quantos tipos de veículos tem de cada?</p>
+<p>Então, tem que ser usada a função assim:</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">inventory</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">saopaulo&#34;</span><span class="p">,</span> 
+          <span class="n">vehcomp</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="n">PC</span> <span class="o">=</span> <span class="m">4</span><span class="p">,</span> <span class="n">LCV</span> <span class="o">=</span> <span class="m">5</span><span class="p">,</span> <span class="n">HGV</span> <span class="o">=</span> <span class="m">5</span><span class="p">,</span> <span class="n">BUS</span> <span class="o">=</span> <span class="m">3</span><span class="p">,</span> <span class="n">MC</span> <span class="o">=</span> <span class="m">9</span><span class="p">)</span><span class="p">,</span>
+          <span class="n">ef</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">CETESB&#34;</span><span class="p">,</span>
+          <span class="n">year</span> <span class="o">=</span> <span class="m">2018</span><span class="p">)</span>
+</code></pre></div><div class="edit-meta">
 Last updated on 7 Feb 2020
 
 
 <br>
 Published on 7 Feb 2020
-<br><a href="chapter1/_index.md/edit/master/content/chapter1/_index.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="http://localhost:1313/cursovein/sample/table-of-contents/" title="Table of Contents"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Table of Contents</a>
+<br><a href="chapter1/_index.md/edit/master/content/chapter1/_index.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="http://localhost:1313/cursovein/chapter1/4/" title="Dados 1-4"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Dados 1-4</a>
 <a class="nav nav-next" href="http://localhost:1313/cursovein/chapter1/1/" title="Dados 1-1">Next - Dados 1-1 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
@@ -92,7 +108,7 @@ Published on 7 Feb 2020
   
 </li>
 
-<li class="parent active"><a href="http://localhost:1313/cursovein/chapter1/">1. Informação espacial</a>
+<li class="parent active"><a href="http://localhost:1313/cursovein/chapter1/">Estrutura do inventário</a>
   
 <ul class="sub-menu">
 <li class=""><a href="http://localhost:1313/cursovein/chapter1/1/">Dados 1-1</a></li>
