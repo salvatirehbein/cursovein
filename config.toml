@@ -64,7 +64,7 @@ enableMissingTranslationPlaceholders = false
 # Global menu section
 [[menu.main]]
     name = "Home"
-    url = "/"
+    url = "https://ibarraespinosa.github.io/cursovein"
     weight = 1
 
 [[menu.main]]
