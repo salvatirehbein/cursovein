@@ -24,6 +24,13 @@ VEIN é um pacote de R para estimar emissões veiculares em 5 etapas.
 4. Estimar emissões.
 5. Post-processamento de emissões em mapas e bancos de dados.
 
+## Sobre o curso
+
+O curso esta pensado para quem não tem conhecimento de R, sabe usar um processador de planilhas como Windows Excel ou Libre Office Calc e *precisa ter emissões*.
+
+Os prerequisitos desejaveis seríam conhecimento de R base, data.table, e sf. Sem embargo, provavelmente o mais o pre-requisito mais importante é que tem que fazer tudo **pasinho por pasinho** e escrever todo o que faz entre cada passinho.
+
+
 
 * Documentation menu (Select [Menu style](getting-started/screenshot/#menu-style))
 * [Table Of Contents](sample/table-of-contents/) for the page (selective)
