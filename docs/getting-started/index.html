@@ -55,45 +55,13 @@
 </nav>
 </div>
 <div class="content-container">
-<main><h1>Começando</h1><h2 id="instalação">[Instalação]</h2>
-<p>A forma mas facil de instalar vein é, abrir R e escrever na termina:</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#34;</span><span class="s">vein&#34;</span><span class="p">)</span>
-</code></pre></div><p>O a versão de <a href="">GitHub</a></p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1">#install.packages(&#34;remotes&#34;)</span>
-<span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&#34;</span><span class="s">atmoschem/vein&#34;</span><span class="p">)</span>
-</code></pre></div><p>De forma automática vão ser instalados os pacotes extras que são necessarios. Os pacotes necessarios sao:</p>
-<ul>
-<li><a href="https://github.com/r-spatial/sf/">sf</a>, para trabalhar com vetores espaciais.</li>
-<li><a href="https://github.com/edzer/sp/">sp</a>, antigo pacote de vetores espaciais, usado um caso específico de compatiilidade.</li>
-<li><a href="https://github.com/Rdatatable/data.table">data.table</a> processador de data.frame <strong>ultra rapido</strong>.</li>
-<li><a href="https://github.com/atmoschem/vein/">eixport</a>: lee as saidas espaciais do VEIN e outros para gerar dados de entrada de modelos de qualidade do ar, como <a href="https://www2.acom.ucar.edu/wrf-chem">WRF-Chem</a>.</li>
-</ul>
-<h2 id="pre-requisitos">[Pre-requisitos]</h2>
-<p><a href="https://github.com/r-spatial/sf/">sf</a> é um pacote de R com interace para as librerías <a href="http://www.gdal.org/">GDAL</a> (vetores), <a href="http://proj4.org/">PROJ</a> e <a href="http://trac.osgeo.org/geos">GEOS</a>. Esto implica que estas librerías tem que estar presentes no sistema primeiro antes de instalar sf.
-<strong>eixport</strong> importa funcções do <a href="https://CRAN.R-project.org/package=ncdf4">ncdf4</a>, então também é necessario instalar <a href="https://www.unidata.ucar.edu/software/netcdf/">NetCDF</a>.</p>
-<p>As recomendações da pagina web de GitHub <a href="https://github.com/r-spatial/sf/">sf</a> para instalar as librerias em diferentes siwtemas são:</p>
-<h3 id="windows">Windows</h3>
-<p>Instala [R], ve a versão e instala <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>, que provee MinGW-w64 32/64-bit para compilar C, Fortran e C++. Isto é importante porque vein tambem tem codigo em Fortran.</p>
-<h3 id="ubuntu">Ubuntu</h3>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev libnetcdf-dev
-</code></pre></div><h3 id="fedora">Fedora</h3>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo dnf install gdal-devel proj-devel proj-epsg proj-nad geos-devel udunits2-devel netcdf-devel
-</code></pre></div><h3 id="arch">Arch</h3>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">pacman -S gdal proj geos netcdf
-pacaur/yaourt/whatever -S udunits
-</code></pre></div><h3 id="macos">MacOS</h3>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">brew install pkg-config
-brew install gdal netcdf
-</code></pre></div><h2 id="ides-como-rstudio-o-vscode">IDEs como RStudio o VSCode</h2>
+<main><h1>Começando</h1><p>Obrigado por começar este curso. Para instalar vein tem que instalar primeiro R desde <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>. R pode ser instalado e muitos tipos diferentes de sistemas operacionais.</p>
+<p><img src="https://i.imgur.com/38mZ4Qh.png" alt=""></p>
+<h2 id="ides-como-rstudio-o-vscode">IDEs como RStudio o VSCode</h2>
 <p>É altamente recomendado instalar <a href="https://rstudio.com/">Rstudio</a> ou <a href="https://code.visualstudio.com/">VSCode</a>.</p>
-<h2 id="demo">demo</h2>
-<p>Quando vein esteja instalado, é possivel rodar o demo apertando a tecla ENTER para mudar de graficos.</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">library</span><span class="p">(</span><span class="n">vein</span><span class="p">)</span>
-<span class="nf">demo</span><span class="p">(</span><span class="n">VEIN</span><span class="p">)</span>
-</code></pre></div><p>dica:</p>
-<blockquote>
-<p>Antes de usar VEIN, fecha Google Chrome pois usa muita memoria RAM</p>
-</blockquote>
+<h3 id="windows">Windows</h3>
+<p>Instala <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>, que provee MinGW-w64 32/64-bit para compilar C, Fortran e C++. Isto é importante porque vein tambem tem codigo em Fortran.</p>
+<p><img src="https://i.imgur.com/jIhAkKL.png" alt=""></p>
 <div class="edit-meta">
 Last updated on 8 Dec 2018
 
@@ -101,7 +69,7 @@ Last updated on 8 Dec 2018
 <br>
 Published on 23 Nov 2018
 <br><a href="getting-started/_index.md/edit/master/content/getting-started/_index.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="http://localhost:1313/cursovein/" title="Curso sobre Vehicular Emissions Inventory (VEIN)"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Curso sobre Vehicular Emissions Inventory (VEIN)</a>
-<a class="nav nav-next" href="http://localhost:1313/cursovein/getting-started/installation/" title="Installation">Next - Installation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<a class="nav nav-next" href="http://localhost:1313/cursovein/getting-started/configuration/" title="Pre-Requisitos">Next - Pre-Requisitos <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
 </main><div class="sidebar">
@@ -113,8 +81,8 @@ Published on 23 Nov 2018
 <li class="parent active has-sub-menu"><a href="http://localhost:1313/cursovein/getting-started/">Começando<span class="mark opened">-</span></a>
   
 <ul class="sub-menu">
-<li class=""><a href="http://localhost:1313/cursovein/getting-started/installation/">Installation</a></li>
-<li class=""><a href="http://localhost:1313/cursovein/getting-started/configuration/">Configuração</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/getting-started/configuration/">Pre-Requisitos</a></li>
+<li class=""><a href="http://localhost:1313/cursovein/getting-started/installation/">Instalação</a></li>
 <li class=""><a href="http://localhost:1313/cursovein/getting-started/screenshot/">Screenshot</a></li>
 </ul>
   

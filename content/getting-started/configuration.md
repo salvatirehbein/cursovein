@@ -1,135 +1,52 @@
 ---
-title: "Configuração"
+title: "Pre-Requisitos"
 date: 2017-10-17T15:26:15Z
 lastmod: 2019-10-26T15:26:15Z
 draft: false
-weight: 20
+weight: 10
 ---
 
+vein importa funções de:
 
-You may specify options in config.toml (or config.yaml/config.json) of your site to make use of this theme’s features.
+- [sf](https://github.com/r-spatial/sf/), para trabalhar com vetores espaciais.
+- [sp](https://github.com/edzer/sp/), antigo pacote de vetores espaciais, usado um caso específico de compatiilidade.
+- [data.table](https://github.com/Rdatatable/data.table) processador de data.frame **ultra rapido**.
+- [eixport](https://github.com/atmoschem/vein/): lee as saidas espaciais do VEIN e outros para gerar dados de entrada de modelos de qualidade do ar, como [WRF-Chem](https://www2.acom.ucar.edu/wrf-chem).
 
-For an example of `config.toml`, see [config.toml](https://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/config.toml) in exampleSite.
 
-## Params
+[sf](https://github.com/r-spatial/sf/) é um pacote de R com interace para as librerías [GDAL](http://www.gdal.org/) (vetores), [PROJ](http://proj4.org/) e [GEOS](http://trac.osgeo.org/geos). Esto implica que estas librerías tem que estar presentes no sistema primeiro antes de instalar sf. 
+**eixport** importa funcções do [ncdf4](https://CRAN.R-project.org/package=ncdf4), então também é necessario instalar [NetCDF](https://www.unidata.ucar.edu/software/netcdf/).
 
-    # Souce Code repository section
-    description = "put your description"
-    github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.7.0"
+As recomendações da pagina web de GitHub [sf](https://github.com/r-spatial/sf/) para instalar as librerias em diferentes sistemas são:
 
-    # Documentation repository section
-    # documentation repository (set edit link to documentation repository)
-    github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+### Windows
 
-    # Analytic section
-    google_analytics_id = "" # Your Google Analytics tracking id
-    tag_manager_container_id = "" # Your Google Tag Manager container id
-    google_site_verification = "" # Your Google Site Verification for Search Console
+Instala [R], ve a versão e instala [Rtools](https://cran.r-project.org/bin/windows/Rtools/), que provee MinGW-w64 32/64-bit para compilar C, Fortran e C++. Isto é importante porque vein tambem tem codigo em Fortran.
 
-    # Theme settings section
-    # Theme color
-    custom_font_color = ""
-    custom_background_color = ""
 
-    # Documentation Menu section
-    # Menu style settings
-    menu_style = "open-menu" # "open-menu" or "slide-menu"
+### Ubuntu
 
-    # Date format
-    dateformat = "" # default "2 Jan 2006"
-    # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
-
-    # path name excluded from documentation menu
-    menu_exclusion = [
-        "archives",
-        "archive",
-        "blog",
-        "entry",
-        "post",
-        "posts"
-    ]
-
-#### `description`
-
-The document summary
-
-default: `put your description`
-
-#### `github_repository`
-
-URL of souce code repository
-
-default: `https://github.com/thingsym/hugo-theme-techdoc`
-
-#### `version`
-
-The version of souce code
-
-default: `0.7.0`
-
-#### `github_doc_repository`
-
-URL of documentation repository for editting
-
-default: `https://github.com/thingsym/hugo-theme-techdoc`
-
-#### `google_analytics_id`
-
-ID of Google Analytics
-
-default: `""`
-
-Container ID of Google Tag Manager
-
-#### `tag_manager_container_id`
-
-default: `""`
-
-#### `google_site_verification`
-
-Content value in meta tag `google-site-verification` for Google Search Console
-
-```
-<meta name="google-site-verification" content="e7-viorjjfiihHIoowh8KLiowhbs" />
+```bash
+sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev libnetcdf-dev
 ```
 
-default: `""`
+### Fedora
 
-#### `custom_font_color`
+```bash
+sudo dnf install gdal-devel proj-devel proj-epsg proj-nad geos-devel udunits2-devel netcdf-devel
+```
 
-Header font color
+### Arch
 
-default: `""`
+```bash
+pacman -S gdal proj geos netcdf
+pacaur/yaourt/whatever -S udunits
+```
 
-#### `custom_background_color`
+### MacOS
 
-Header background color
+```bash
+brew install pkg-config
+brew install gdal netcdf
+```
 
-default: `""`
-
-#### `menu_style`
-
-Documentation Menu style, Open Menu or Slide Menu
-
-default: `open-menu`  
-value: `open-menu` | `slide-menu`
-
-#### `dateformat`
-
-default: `""` as `2 Jan 2006`
-
-#### `menu_exclusion`
-
-Path name excluded from documentation menu
-
-By default, we exclude commonly used folder names in blogs.
-
-default: `[
-        "archives",
-        "archive",
-        "blog",
-        "entry",
-        "post",
-        "posts"
-    ]`

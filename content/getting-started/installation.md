@@ -1,35 +1,32 @@
 ---
-title: "Installation"
+title: "Instalação"
 date: 2017-10-17T15:26:15Z
 draft: false
-weight: 10
+weight: 20
 ---
 
-## Download Hugo theme
+A forma mas facil de instalar vein é, abrir R e escrever na termina:
 
-If you have git installed, you can do the following at the command-line-interface within the Hugo directory:
-
-```
-cd themes
-git clone https://github.com/thingsym/hugo-theme-techdoc.git
+```r
+install.packages("vein")
 ```
 
-For more information read [the Hugo documentation](https://gohugo.io/themes/installing-and-using-themes/).
+O a versão de [GitHub]()
 
-## Configure
-
-You may specify options in config.toml (or config.yaml/config.json) of your site to make use of this theme's features.
-
-For an example of `config.toml`, see [config.toml](https://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/config.toml) in exampleSite.
-
-See [the Configuration documentation](../configuration/).
-
-## Preview site
-
-To preview your site, run Hugo's built-in local server.
-
-```
-hugo server -t hugo-theme-techdoc
+```r
+#install.packages("remotes")
+remotes::install_github("atmoschem/vein")
 ```
 
-Browse site on http://localhost:1313
+## demo
+
+Quando vein esteja instalado, é possivel rodar o demo apertando a tecla ENTER para mudar de graficos.
+
+```r
+library(vein)
+demo(VEIN)
+```
+
+dica:
+
+> Antes de usar VEIN, fecha Google Chrome pois usa muita memoria RAM
