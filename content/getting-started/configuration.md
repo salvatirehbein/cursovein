@@ -1,10 +1,11 @@
 ---
-title: "Configuration"
+title: "Configuração"
 date: 2017-10-17T15:26:15Z
 lastmod: 2019-10-26T15:26:15Z
 draft: false
 weight: 20
 ---
+
 
 You may specify options in config.toml (or config.yaml/config.json) of your site to make use of this theme’s features.
 
