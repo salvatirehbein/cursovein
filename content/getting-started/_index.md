@@ -1,8 +1,8 @@
 ---
 title: "Começando"
-date: 2017-10-17T15:26:15Z
-lastmod: 2018-12-08T15:26:15Z
-publishdate: 2018-11-23T15:26:15Z
+date: 2020-02-07T00:00:00Z
+lastmod: 2020-02-07T01:00:00Z
+publishdate: 2020-02-07T02:00:00Z
 draft: false
 weight: 9
 
