@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Curso de VEIN</title>
-    <link>http://localhost:1313/cursovein/tags/</link>
+    <link>https://ibarraespinosa.github.io/cursovein/tags/</link>
     <description>Recent content in Tags on Curso de VEIN</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/cursovein/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ibarraespinosa.github.io/cursovein/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>development</title>
-      <link>http://localhost:1313/cursovein/tags/development/</link>
+      <link>https://ibarraespinosa.github.io/cursovein/tags/development/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/cursovein/tags/development/</guid>
+      <guid>https://ibarraespinosa.github.io/cursovein/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>go</title>
-      <link>http://localhost:1313/cursovein/tags/go/</link>
+      <link>https://ibarraespinosa.github.io/cursovein/tags/go/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/cursovein/tags/go/</guid>
+      <guid>https://ibarraespinosa.github.io/cursovein/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>http://localhost:1313/cursovein/tags/golang/</link>
+      <link>https://ibarraespinosa.github.io/cursovein/tags/golang/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/cursovein/tags/golang/</guid>
+      <guid>https://ibarraespinosa.github.io/cursovein/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>http://localhost:1313/cursovein/tags/hugo/</link>
+      <link>https://ibarraespinosa.github.io/cursovein/tags/hugo/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/cursovein/tags/hugo/</guid>
+      <guid>https://ibarraespinosa.github.io/cursovein/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>templates</title>
-      <link>http://localhost:1313/cursovein/tags/templates/</link>
+      <link>https://ibarraespinosa.github.io/cursovein/tags/templates/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/cursovein/tags/templates/</guid>
+      <guid>https://ibarraespinosa.github.io/cursovein/tags/templates/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>http://localhost:1313/cursovein/tags/themes/</link>
+      <link>https://ibarraespinosa.github.io/cursovein/tags/themes/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/cursovein/tags/themes/</guid>
+      <guid>https://ibarraespinosa.github.io/cursovein/tags/themes/</guid>
       <description></description>
     </item>
     
